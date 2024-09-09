@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+.chat-container{
+    display: flex;
+    width: 100%;
+}
+
+/* Side navigation */
+.sidenav-box{
+    width: 20%;
+    background-color: rgb(232, 232, 252);
+    color: rgb(70, 68, 68);
+    padding: 15px;
+    border: 3px solid rgb(207, 207, 219);
+}
+
+.sidenav nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+.sidenav nav ul li{
+    margin: 0px 0;
+}
+.sidenav nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+}
+.sidenav nav ul li:hover{
+    background-color: #6c6c6d;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+/* Main Chatbox area */
+.mainchat-area{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ecf0f1;
+    padding: 20px;
+}
+
+header{
+    margin: 0;
+    padding-left: 1.5em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    font-size: 24px;
+    color: #34495e;
+    background-color: rgb(232, 232, 252);
+    border-radius: 50px;
+    border: 1px solid rgb(207, 207, 219) ;
+   
+}
+
+.chat-window {
+    flex-grow: 1;
+    background-color: rgb(246, 246, 248);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(148, 147, 147, 0.1);
+    overflow-y: auto;
+    margin-top: 4em;
+    margin-bottom: 9em;
+}
+
+.chat-container .chat{
+    padding: 25px 10px;
+    display: flex;
+    justify-content: center;
+    color: rgb(36, 35, 35);
+}
+.chat-container .chat.outgoing{
+    background: rgb(239, 239, 240);
+    /* border-radius: 8px 8px 0 0; */
+    /* border: 1px solid rgb(224, 224, 224); */
+}    
+
+.chat-container .chat.incoming{
+    background: rgb(232, 232, 252);
+    /* border: 1px solid rgb(224, 224, 224); */
+}
+.chat .chat-content{
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.chat .chat-content span{
+    font-size: 1.3rem;
+    color: rgb(112, 111, 111);
+    visibility: hidden;
+}
+.chat:hover .chat-content span{
+    visibility: visible;
+}
+
+.chat .chat-details{
+    display: flex;
+    align-items: center;
+
+}
+.chat .chat-details img{
+    width: 35px;
+    height: 35px;
+    align-self: flex-start;
+    object-fit: cover;
+    border-radius: 2px;
+    margin-right: 1rem;
+    
+}
+
+.chat .chat-details{
+    white-space: pre-wrap;
+    font-size: 1.05rem;
+    padding: 0 50px 0 25px;
+}
+
+.fa-regular {
+    user-select: none;
+    cursor: pointer;
+}
+
+.typing-animation{
+    display: inline-flex;
+    padding-left: 25px;
+}
+.chat .typing-animation .typing-dot{
+    height: 7px;
+    width: 7px;
+    opacity: 0.7;
+    margin: 0 3px;
+    border-radius: 50%;
+    background-color: rgb(36, 35, 35);
+    animation: animateDots 1.5s var(--delay) ease-in-out infinite;
+}
+@keyframes animateDots {
+    0%, 44%{
+        transform: translateY(0px);
+    }
+    22%{
+        opacity: 0.2;
+        transform: translateY(-6px);
+    }
+    44%{
+        opacity: 0.2;
+    }
+}
+
+
+ /* Typing Container  */
+.typing-container{
+    position: fixed;
+    bottom: 0;
+    width: 77.5%;
+    display: flex;
+    /* padding: 20px 10px; */
+    justify-content: center;
+    /* background: rgb(246, 246, 248); */
+    /* border: 1px solid rgb(207, 207, 219); */
+    margin-bottom: 2rem;
+}
+.typing-container .typing-content{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+.typing-content .typing-textarea{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.typing-textarea textarea{
+    width: 100%;
+    height: 55px;
+    border: none;
+    resize: none;
+    font-size: 1rem;
+    border-radius: 50px;
+    color: rgb(112, 111, 111);
+    padding: 15px 45px 15px 20px;
+
+}
+.typing-textarea textarea::placeholder{
+    color: rgb(112, 111, 111);
+}
+.typing-textarea span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+.typing-textarea textarea:valid ~ span{
+    visibility: visible;
+}
+.typing-content span{
+    height: 55px;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(112, 111, 111);
+}
+.typing-controls{
+    display: flex;
+}
+.typing-controls span{
+    margin-left: 7px;
+    font-size: 1.4rem;
+    background: #ecf0f1;
+    border: 1px solid rgb(218, 218, 223);
+    border-radius: 50px;
+}
