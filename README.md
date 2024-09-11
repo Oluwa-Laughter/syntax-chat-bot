@@ -1,6 +1,9 @@
 # Chatbot Clone using Google Gemini API
 
-This repository contains a simple chatbot application built using the Google Gemini API.
+This repository contains a simple chatbot application built on the Google Gemini API.
+
+**Live site:**
+[Syntax-Chatbot](https://oluwa-laughter.github.io/syntax-chat-bot/)
 
 **Features:**
 
@@ -10,9 +13,10 @@ This repository contains a simple chatbot application built using the Google Gem
 
 **Usage:**
 
-- Once the chatbot is running, you can interact with it through the console.
 - Type your messages and press Enter to send.
 - The chatbot will respond based on its understanding of your input.
+- You can continue the conversation by typing additional messages.
+- Experiment with different prompts and responses to tailor the chatbot to your specific needs.
 
 **Example:**
 
@@ -21,15 +25,6 @@ Chatbot: Hi there! How can I assist you today?
 You: What's the weather like in London?
 Chatbot: ...
 
-**Customization:**
-
-- You can customize the chatbot's behavior by modifying the code in `js/script.js`.
-- Experiment with different prompts and responses to tailor the chatbot to your specific needs.
-
 **Contributing:**
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
-
-**License:**
-
-This project is licensed under the MIT License.
