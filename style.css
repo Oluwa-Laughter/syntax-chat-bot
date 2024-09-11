@@ -54,7 +54,7 @@ header {
   padding: 20px;
   box-shadow: 0 0 10px rgba(148, 147, 147, 0.1);
   overflow-y: auto;
-  margin: 3rem 0 5rem;
+  margin: 2rem 0 5rem;
 }
 
 body.dark-mode .chat-container .chat {
@@ -147,7 +147,7 @@ body.dark-mode .chat-container .chat {
 .typing-container {
   position: fixed;
   bottom: 0;
-  width: 77.5%;
+  width: 80%;
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
@@ -217,6 +217,9 @@ body.dark-mode .chat-container .chat {
 
 /* For tablets */
 @media (max-width: 768px) {
+  .typing-container {
+    margin-bottom: 1rem;
+  }
   .mainchat-area {
     padding: 10px;
   }
@@ -226,7 +229,7 @@ body.dark-mode .chat-container .chat {
   }
 
   .chat-window {
-    margin-top: 2em;
+    margin: 2rem 0 4rem;
     margin-bottom: 5em;
     padding: 15px;
   }
@@ -237,7 +240,7 @@ body.dark-mode .chat-container .chat {
 
   .typing-textarea textarea {
     height: 45px;
-    font-size: 12px;
+    font-size: 0.7rem;
   }
 
   .typing-textarea span {
@@ -266,8 +269,7 @@ body.dark-mode .chat-container .chat {
   }
 
   .chat-window {
-    margin-top: 1em;
-    margin-bottom: 3em;
+    margin: 1.5rem 0 3rem;
     padding: 10px;
   }
 

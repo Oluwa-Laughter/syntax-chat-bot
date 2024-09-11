@@ -1,6 +1,11 @@
 # Chatbot Clone using Google Gemini API
 
-This repository contains a simple chatbot application built on the Google Gemini API.
+This repository contains a simple chatbot application built using:
+
+- HTML
+- CSS
+- Vanilla JavaScript
+- Google Gemini API
 
 **Live site:**
 [Syntax-Chatbot](https://oluwa-laughter.github.io/syntax-chat-bot/)
@@ -20,11 +25,7 @@ This repository contains a simple chatbot application built on the Google Gemini
 
 **Example:**
 
-You: Hello!
-Chatbot: Hi there! How can I assist you today?
-You: What's the weather like in London?
-Chatbot: ...
-
-**Contributing:**
-
-Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+<p>You: Hello!</p>
+<p>Chatbot: Hi there! How can I assist you today?</p>
+<p>You: What's the weather like in London?</p>
+<p>Chatbot: ...</p>
