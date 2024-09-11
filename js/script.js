@@ -10,7 +10,6 @@ const deleteButton = document.querySelector("#delete-btn");
 
 let userRequest;
 
-
 const typingEffect = function (response, responseEl) {
   const responseText = response.split("");
   responseText.forEach((char, index) => {
@@ -55,7 +54,7 @@ const animation = function () {
   const html = `
     <article class="chat-content">
       <article class="chat-details">
-        <img src="icons/chatgpt-icon.svg" alt="chatbot-img" />
+        <img src="icons/google-gemini-icon.svg" alt="chatbot-img" />
         <p></p>
         <article class="typing-animation">
             <article class="typing-dot" style="--delay: 0.2s"></article>
