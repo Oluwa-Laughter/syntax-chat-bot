@@ -6,9 +6,6 @@ const chatWindow = document.querySelector(".chat-window");
 
 let userRequest;
 
-const API_KEY = "AIzaSyBSVoDpvje6KCtayoxbCze9y12TQNG9DgQ";
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
-
 const typingEffect = function (response, responseEl) {
   const responseText = response.split("");
   responseText.forEach((char, index) => {
@@ -21,6 +18,11 @@ const typingEffect = function (response, responseEl) {
 const getResponse = async function (incommingMessage) {
   try {
     const replyEl = incommingMessage.querySelector(".chat-details p");
+
+    const API_KEY = "AIzaSyBSVoDpvje6KCtayoxbCze9y12TQNG9DgQ";
+
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
+
     const response = await fetch(API_URL, {
       method: "POST",
       headers: {
@@ -60,9 +62,7 @@ const animation = function () {
   `;
 
   const incommingMessage = createElement(html, "incoming");
-  console.log(incommingMessage);
   chatWindow.appendChild(incommingMessage);
-
   getResponse(incommingMessage);
 
   const copyToClipboard = incommingMessage.querySelector(".copy");
