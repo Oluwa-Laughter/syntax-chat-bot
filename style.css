@@ -10,6 +10,15 @@
 body {
   display: flex;
   height: 100vh;
+  background-color: #ecf0f1;
+  color: #34495e;
+
+  /* background-color: var(--outgoing-chat-bg); */
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .chat-container {
@@ -80,7 +89,7 @@ header {
   margin-bottom: 9em;
 }
 
-.chat-container .chat {
+body.dark-mode .chat-container .chat {
   padding: 25px 10px;
   display: flex;
   justify-content: center;
@@ -90,7 +99,6 @@ header {
 .chat-container .chat.outgoing {
   background: rgb(239, 239, 240);
 }
-
 .chat-container .chat.incoming {
   background: rgb(232, 232, 252);
 }

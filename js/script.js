@@ -1,10 +1,15 @@
+// The code is executed in strict mode, which helps catch common coding mistakes and unsafe actions(like using undeclared variables)
 "use strict";
 
+//Dom Elements
 const chatInput = document.getElementById("chat-input");
 const sendBtn = document.getElementById("send-btn");
 const chatWindow = document.querySelector(".chat-window");
+const themeButton = document.querySelector("#theme-btn");
+const deleteButton = document.querySelector("#delete-btn");
 
 let userRequest;
+
 
 const typingEffect = function (response, responseEl) {
   const responseText = response.split("");
@@ -15,6 +20,7 @@ const typingEffect = function (response, responseEl) {
   });
 };
 
+// handles An api response
 const getResponse = async function (incommingMessage) {
   try {
     const replyEl = incommingMessage.querySelector(".chat-details p");
@@ -44,6 +50,7 @@ const getResponse = async function (incommingMessage) {
   }
 };
 
+// handles the creates and inserts an incoming message element with a loading animation
 const animation = function () {
   const html = `
     <article class="chat-content">
@@ -76,6 +83,7 @@ const animation = function () {
   });
 };
 
+// handles the creation of a new DOM element
 const createElement = function (html, className) {
   const element = document.createElement("article");
   element.innerHTML = html;
@@ -105,6 +113,12 @@ chatInput.addEventListener("keypress", (e) => {
     handleOutgoingMessage();
     e.target.value = "";
     e.preventDefault();
+  }
+});
+
+deleteButton.addEventListener("click", () => {
+  if (confirm("Are you sure you want to delete all the chats?")) {
+    chatWindow.innerHTML = " ";
   }
 });
 
