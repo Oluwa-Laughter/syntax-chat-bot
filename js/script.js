@@ -2,6 +2,7 @@
 "use strict";
 
 //Dom Elements
+const body = document.querySelector("body");
 const chatInput = document.getElementById("chat-input");
 const sendBtn = document.getElementById("send-btn");
 const chatWindow = document.querySelector(".chat-window");
@@ -121,4 +122,19 @@ deleteButton.addEventListener("click", () => {
   }
 });
 
-sendBtn.addEventListener("click", handleOutgoingMessage);
+sendBtn.addEventListener("click", function () {
+  handleOutgoingMessage();
+  chatInput.value = "";
+});
+
+const handleTheme = function () {
+  body.classList.toggle("dark-mode");
+  const isDarkMode = document.body.classList.contains("dark-mode");
+  localStorage.setItem("darkMode", isDarkMode);
+};
+
+themeButton.addEventListener("click", handleTheme);
+
+if (localStorage.getItem("darkMode") === "true") {
+  handleTheme();
+}
