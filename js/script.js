@@ -25,7 +25,7 @@ const getResponse = async function (incommingMessage) {
   try {
     const replyEl = incommingMessage.querySelector(".chat-details p");
 
-    const API_KEY = "AIzaSyBSVoDpvje6KCtayoxbCze9y12TQNG9DgQ";
+    const API_KEY = "";
 
     const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${API_KEY}`;
 
